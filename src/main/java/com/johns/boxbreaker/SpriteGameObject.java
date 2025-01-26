@@ -1,15 +1,24 @@
 package com.johns.boxbreaker;
 
+import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.Input;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.Sprite;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
-public class SpriteGameObject extends Sprite implements GameLoopable
+public class SpriteGameObject extends BaseGameObject implements GameLoopable
 {
+    Sprite sprite;
     public SpriteGameObject(String path)
     {
-        super.setRegion(new Texture(path));
-        super.setSize(1,1);
+        sprite = new Sprite(new Texture(path));
+        sprite.setSize(1,1);
+    }
+
+    @Override
+    public void create()
+    {
+
     }
 
     @Override
@@ -18,13 +27,13 @@ public class SpriteGameObject extends Sprite implements GameLoopable
     }
 
     @Override
-    public void update() {
-
+    public void logic() {
+        super.logic();
     }
 
     @Override
     public void draw(SpriteBatch spriteBatch) {
-        super.draw(spriteBatch);
+        sprite.draw(spriteBatch);
     }
 
 }

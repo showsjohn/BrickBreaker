@@ -1,7 +1,6 @@
 package com.johns.boxbreaker;
 
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -24,6 +23,15 @@ public class GameObjectList implements GameLoopable {
     }
 
     @Override
+    public void create()
+    {
+        for (GameLoopable obj: objectList)
+        {
+            obj.create();
+        }
+    }
+
+    @Override
     public void input() {
         for (GameLoopable obj: objectList)
         {
@@ -32,10 +40,10 @@ public class GameObjectList implements GameLoopable {
     }
 
     @Override
-    public void update() {
+    public void logic() {
         for (GameLoopable obj: objectList)
         {
-            obj.update();
+            obj.logic();
         }
     }
 
