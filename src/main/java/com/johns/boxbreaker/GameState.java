@@ -3,11 +3,13 @@ package com.johns.boxbreaker;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.utils.viewport.FitViewport;
 
+import java.util.Dictionary;
+
 
 public abstract class GameState implements GameLoopable {
     protected GameObjectList gameObjectList;
     protected FitViewport viewport;
-    protected SpriteBatch spriteBatch;
+
 
     protected GameState()
     {
@@ -16,6 +18,7 @@ public abstract class GameState implements GameLoopable {
     @Override
     public void create() {
         gameObjectList = new GameObjectList();
+        gameObjectList.getClass();
         viewport = new FitViewport(1920, 1080);
     }
 

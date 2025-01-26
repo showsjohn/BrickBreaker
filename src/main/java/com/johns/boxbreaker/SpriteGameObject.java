@@ -15,6 +15,11 @@ public class SpriteGameObject extends BaseGameObject implements GameLoopable
         sprite.setSize(1,1);
     }
 
+    public void setPosition(float x, float y)
+    {
+        sprite.setPosition(x, y);
+    }
+
     @Override
     public void create()
     {
