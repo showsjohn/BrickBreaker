@@ -4,7 +4,11 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
 public interface GameLoopable {
 
+
+    public boolean isDestroyed();
+    public void destroy();
     public void create();
+
     public default void render(SpriteBatch spriteBatch)
     {
         input();

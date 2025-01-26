@@ -7,6 +7,18 @@ public class BaseGameObject implements GameLoopable
 {
     float speed;
     float deltaTime;
+    boolean isDestroyed = false;
+
+    @Override
+    public boolean isDestroyed() {
+        return isDestroyed;
+    }
+
+    @Override
+    public void destroy()
+    {
+        isDestroyed = true;
+    }
 
     @Override
     public void create() {

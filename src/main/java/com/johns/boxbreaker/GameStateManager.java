@@ -4,7 +4,7 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import java.util.Dictionary;
 import java.util.Hashtable;
 
-public class GameStateManager implements GameLoopable
+public class GameStateManager
 {
     GameState currentState;
     Dictionary<String, GameState> gameStates;
@@ -45,6 +45,13 @@ public class GameStateManager implements GameLoopable
 
     public void resize(int width, int height) {
         currentState.resize(width, height);
+    }
+
+    public void render(SpriteBatch spriteBatch)
+    {
+        input();
+        logic();
+        draw(spriteBatch);
     }
 
 

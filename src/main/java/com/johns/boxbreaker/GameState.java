@@ -1,25 +1,26 @@
 package com.johns.boxbreaker;
 
+import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.utils.viewport.FitViewport;
+import com.badlogic.gdx.utils.viewport.StretchViewport;
 
 import java.util.Dictionary;
 
 
-public abstract class GameState implements GameLoopable {
+public abstract class GameState {
     protected GameObjectList gameObjectList;
-    protected FitViewport viewport;
+    protected StretchViewport viewport;
 
 
     protected GameState()
     {
 
     }
-    @Override
+
     public void create() {
         gameObjectList = new GameObjectList();
-        gameObjectList.getClass();
-        viewport = new FitViewport(1920, 1080);
+        viewport = new StretchViewport(Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
     }
 
 
@@ -28,19 +29,19 @@ public abstract class GameState implements GameLoopable {
     }
 
 
-    @Override
+
     public void input()
     {
         gameObjectList.input();
     }
 
-    @Override
+
     public void logic()
     {   ;
         gameObjectList.logic();
     }
 
-    @Override
+
     public void draw(SpriteBatch spriteBatch) {
 
 
