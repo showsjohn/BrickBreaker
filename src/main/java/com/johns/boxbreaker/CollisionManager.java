@@ -42,7 +42,9 @@ public class CollisionManager
                 if (first.hasCollided(second)) // if a collision has occurred:
                 {
                     handleCollision(first, second); // then handleCollision
+
                 }
+
             }
         }
     }

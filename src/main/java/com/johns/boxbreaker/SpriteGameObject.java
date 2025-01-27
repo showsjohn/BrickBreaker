@@ -1,11 +1,11 @@
 package com.johns.boxbreaker;
 
 import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.Input;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.Sprite;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.Rectangle;
+import com.badlogic.gdx.math.Vector2;
 
 public class SpriteGameObject extends BaseGameObject implements GameLoopable
 {
@@ -14,7 +14,7 @@ public class SpriteGameObject extends BaseGameObject implements GameLoopable
     float scaleFactor;
     public SpriteGameObject(String path)
     {
-        sprite = new Sprite(new Texture(path));
+        sprite = new Sprite(new Texture(Gdx.files.internal(path)));
         sprite.setSize(1,1);
         boundingBox = sprite.getBoundingRectangle();
         scaleFactor = 1;
@@ -23,6 +23,11 @@ public class SpriteGameObject extends BaseGameObject implements GameLoopable
     public void setPosition(float x, float y)
     {
         sprite.setPosition(x, y);
+    }
+
+    public  Vector2 getPosition()
+    {
+        return new Vector2(this.sprite.getX(), this.sprite.getY());
     }
 
     @Override

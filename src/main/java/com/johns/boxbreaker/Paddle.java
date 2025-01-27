@@ -13,7 +13,7 @@ public class Paddle extends SpriteGameObject implements Collidable {
 
     public Paddle(String path) {
         super(path);
-        scaleFactor = 4f;
+        scaleFactor = 6f;
         sprite.setOrigin(0,0);
         sprite.setRegion(0,7,32,9);
         sprite.setSize(32,9);
@@ -41,8 +41,7 @@ public class Paddle extends SpriteGameObject implements Collidable {
 
     public void logic() {
         super.logic();
-
-        System.out.println(this.sprite.getBoundingRectangle());
+        this.sprite.getBoundingRectangle();
     }
 
     @Override

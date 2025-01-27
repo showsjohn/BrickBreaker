@@ -8,7 +8,6 @@ public class Ball extends SpriteGameObject implements Collidable {
 
     float deltaY;
     float deltaX;
-    int speedY;
 
     public Ball(String path) {
         super(path);
@@ -16,19 +15,21 @@ public class Ball extends SpriteGameObject implements Collidable {
         sprite.setOrigin(0,0);
         sprite.setSize(7,7);
         sprite.setScale(scaleFactor);
-        sprite.setPosition(300,300);
+        sprite.setPosition(Gdx.graphics.getWidth() / 2,120);
         sprite.setRegion(128,9,7,7);
         speed = 600f;
 
-        Random rand = new Random();
-
-        // Generate random integers in range 0 to 999
-        int rand_int1 = rand.nextInt(5);
-
-        deltaX = 1;
-        deltaY = 1;
+        deltaX = 0;
+        deltaY = -1;
     }
 
+    public void reset()
+    {
+        sprite.setPosition(Gdx.graphics.getWidth() / 2,500);
+        sprite.translateX(speed * deltaX * deltaTime);
+        sprite.translateY(speed * deltaY  * deltaTime);
+
+    }
 
 
     @Override
@@ -58,10 +59,7 @@ public class Ball extends SpriteGameObject implements Collidable {
         }
 
 // Check vertical boundaries
-        if (sprite.getY() < 0) {
-            deltaY = -deltaY;
-            sprite.setY(0); // Correct position
-        } else if (sprite.getY() + (sprite.getHeight() * scaleFactor) > Gdx.graphics.getHeight()) {
+        if (sprite.getY() + (sprite.getHeight() * scaleFactor) > Gdx.graphics.getHeight()) {
             deltaY = -deltaY;
             sprite.setY(Gdx.graphics.getHeight() - (sprite.getWidth() * scaleFactor)); // Correct position
         }
@@ -120,6 +118,8 @@ public class Ball extends SpriteGameObject implements Collidable {
         if (collidable instanceof Paddle) {
             System.out.println("paddled");
 
+            if(deltaX == 0)
+                deltaX = 1;
             deltaY = -deltaY;
         }
 
