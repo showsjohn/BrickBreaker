@@ -23,40 +23,40 @@ public class Brick extends SpriteGameObject implements Collidable{
         int regionY = 0;
         switch (color)
         {
-            case COLOR.grey:
+            case grey:
             {
                 regionY = 0;
                 hitpoints = 1;
                 break;
             }
-            case COLOR.green:
+            case green:
             {
                 regionY = 16;
                 hitpoints = 2;
                 break;
             }
-            case COLOR.yellow:
+            case yellow:
             {
                 regionY = 32;
                 hitpoints = 3;
                 break;
             }
 
-            case COLOR.orange:
+            case orange:
             {
                 regionY = 48;
                 hitpoints = 3;
                 break;
             }
 
-            case COLOR.red:
+            case red:
             {
                 regionY = 64;
                 hitpoints = 3;
                 break;
             }
 
-            case COLOR.purple:
+            case purple:
             {
                 regionY = 80;
                 hitpoints = 3;

@@ -1,11 +1,7 @@
 package com.johns.boxbreaker;
-
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.badlogic.gdx.utils.viewport.FitViewport;
 import com.badlogic.gdx.utils.viewport.StretchViewport;
-
-import java.util.Dictionary;
 
 
 public abstract class GameState {
@@ -43,9 +39,6 @@ public abstract class GameState {
 
 
     public void draw(SpriteBatch spriteBatch) {
-
-
     }
-
 
 }
