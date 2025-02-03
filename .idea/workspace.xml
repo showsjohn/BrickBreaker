@@ -4,15 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="19192558-e618-4125-8af1-98de96b49ce1" name="Changes" comment="Updated file paths to use the LibGDX built-in file handling to insure the correct paths during Maven packaging. Added a splash screen and gameover screen. Other minor changes.">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/johns/boxbreaker/Brick.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/johns/boxbreaker/Brick.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/johns/boxbreaker/GameState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/johns/boxbreaker/GameState.java" afterDir="false" />
+    <list default="true" id="19192558-e618-4125-8af1-98de96b49ce1" name="Changes" comment="Updated Project to Gradle">
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/kotlinc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/kotlinc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,6 +51,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -90,7 +88,7 @@
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/home/johns/Desktop/Software Design & Construction/Lab1/BrickBreaker/build.gradle",
     "onboarding.tips.debug.path": "/home/johns/Desktop/Software Design & Construction/Lab1/BrickBreaker/src/main/resources/src/Main.kt",
-    "project.structure.last.edited": "Modules",
+    "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle"
@@ -103,17 +101,40 @@
       <recent name="$PROJECT_DIR$/src/main/resources/assets" />
     </key>
   </component>
-  <component name="RunManager">
-    <configuration name="Main" type="Application" factoryName="Application">
-      <option name="ALTERNATIVE_JRE_PATH" value="$USER_HOME$/.jdks/openjdk-23.0.1" />
+  <component name="RunManager" selected="Application.Launch">
+    <configuration name="Launch" type="Application" factoryName="Application">
+      <option name="ALTERNATIVE_JRE_PATH" value="23" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="com.johns.boxbreaker.Launcher" />
-      <module name="BrickBreaker" />
-      <option name="PROGRAM_PARAMETERS" value="$MODULE_WORKING_DIR$/target/classes " />
+      <module name="BrickBreaker.main" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="BrickBreaker" type="GradleRunConfiguration" factoryName="Gradle" nameIsGenerated="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list />
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Application.Launch" />
+      <item itemvalue="Gradle.BrickBreaker" />
+    </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -172,7 +193,15 @@
       <option name="project" value="LOCAL" />
       <updated>1737953771065</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Updated Project to Gradle">
+      <option name="closed" value="true" />
+      <created>1738557733088</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1738557733088</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -192,7 +221,8 @@
     <MESSAGE value="Implemented the Ball and Brick classes, refined the SpriteGameObject class" />
     <MESSAGE value="Implemented collision behavior. GameObjectList now composes CollisionManager for more centralized collision checking and removing. Window and sprite scaling across the game have also been fixed. Magic numbers removed with constants." />
     <MESSAGE value="Updated file paths to use the LibGDX built-in file handling to insure the correct paths during Maven packaging. Added a splash screen and gameover screen. Other minor changes." />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated file paths to use the LibGDX built-in file handling to insure the correct paths during Maven packaging. Added a splash screen and gameover screen. Other minor changes." />
+    <MESSAGE value="Updated Project to Gradle" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated Project to Gradle" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
